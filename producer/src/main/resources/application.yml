@@ -1,0 +1,10 @@
+server:
+  port: 8081
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: legalbriefs
+          content-type: application/json

@@ -1,0 +1,13 @@
+docker:
+  host: "${DOCKER_IP:localhost}"
+
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          autoCreatedTopics: true
+          autoAddPartitions: true
+          zk-nodes: ${docker.host}
+          brokers: ${docker.host}
+      default-binder: kafka
